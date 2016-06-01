@@ -1,0 +1,19 @@
+{
+  "name": "node-express-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Dev Bootcamp",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.13",
+    "node-env-file": "^0.1.8",
+    "q": "^1.4.1",
+    "request": "^2.72.0"
+  }
+}
