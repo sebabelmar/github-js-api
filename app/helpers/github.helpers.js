@@ -5,7 +5,7 @@ var request = require('request');
 var Commit  = require('../models/commit');
 var env     = require('node-env-file');
 var Q       = require('q');
-env(__dirname + '/.env');
+env('.env');
 
 /**
  * Module constants.
@@ -21,7 +21,7 @@ var AUTH = '?client_id=' + CLIENT_ID + '&client_secret=' + SECRET;
  */
 exports.listRepos = function(req, res){
 	var options = {
-		url: 'https://api.github.com/users/' + req.params.username +'/repos'+ AUTH,
+		url: BASE_URL + '/users/' + req.params.username +'/repos'+ AUTH,
 		headers: {
 			'User-Agent': 'request'
 		}
@@ -86,7 +86,7 @@ exports.saveCommits = function(req, res){
 	}
 
 	var options = {
-	  url: 'https://api.github.com/repos/' + USERNAME + '/' +req.params.reponame + '/commits?' + AUTH,
+	  url: BASE_URL + '/repos/' + USERNAME + '/' +req.params.reponame + '/commits?' + AUTH,
 	  headers: {
 	    'User-Agent': 'request'
 	  }
