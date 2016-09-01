@@ -5,14 +5,19 @@ var request = require('request');
 var Commit  = require('../models/commit');
 var env     = require('node-env-file');
 var Q       = require('q');
-env('.env');
+// env('.env');
 
 /**
  * Module constants.
  */
-var USERNAME    = process.env.GITHUB_API_USERNAME;
-var CLIENT_ID   = process.env.GITHUB_API_CLIENT_ID;
-var SECRET      = process.env.GITHUB_API_SECRET;
+var USERNAME    = '';
+var CLIENT_ID   = '';
+var SECRET      = '';
+
+// var USERNAME    = process.env.GITHUB_API_USERNAME;
+// var CLIENT_ID   = process.env.GITHUB_API_CLIENT_ID;
+// var SECRET      = process.env.GITHUB_API_SECRET;
+
 var BASE_URL    = 'https://api.github.com';
 var AUTH = '?client_id=' + CLIENT_ID + '&client_secret=' + SECRET;
 
